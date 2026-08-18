@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js" defer></script>
     <script src="https://unpkg.com/html5-qrcode" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+    <script src="supabase-config.js" defer></script>
     <script src="app.js" defer></script>
   </head>
   <body>
@@ -46,6 +48,16 @@
           </button>
         </div>
         <p class="privacy-note">Los códigos QR solo se validan desde el registro de visitas.</p>
+      </section>
+
+      <section class="view" id="login-view">
+        <div class="section-heading"><button class="back" type="button" data-go="home">←</button><div><p class="eyebrow">Acceso del estudio</p><h2>Iniciar sesión</h2></div></div>
+        <form id="login-form" class="form-card">
+          <label>Correo electrónico<input id="login-email" type="email" required autocomplete="email" placeholder="tu@estudio.com" /></label>
+          <label>Contraseña<input id="login-password" type="password" required autocomplete="current-password" placeholder="••••••••" /></label>
+          <p id="login-error" class="form-help hidden"></p>
+          <div class="form-actions"><button class="button button--ghost" type="button" data-go="home">Cancelar</button><button class="button button--black" type="submit">Entrar <span>→</span></button></div>
+        </form>
       </section>
 
       <section class="view" id="new-card-view">
